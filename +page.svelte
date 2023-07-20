@@ -37,9 +37,6 @@
 
       var jsonString = JSON.stringify(jsonObject);
       
-      // Aqui você pode enviar o JSON para o servidor, armazená-lo localmente ou fazer qualquer outra ação necessária.
-      
-      // Exemplo: download do JSON
       var element = document.createElement('a');
       element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(jsonString));
       element.setAttribute('download', 'data.json');
@@ -48,11 +45,12 @@
       element.click();
       document.body.removeChild(element);
     });
+
 		//it doesn't work - function for reading data
 	document.getElementById('loadButton').addEventListener('click', function() {
       var xhr = new XMLHttpRequest();
-      xhr.open('GET', 'C:\Users\Downloads\data.json', true);  // substitua 'caminho/do/arquivo.json' pelo caminho correto para o seu arquivo JSON - corrigir e apagar comentarios do chatgpt
-      
+      xhr.open('GET', 'C:\Users\Downloads\data.json', true);  
+
       xhr.onload = function() {
         if (xhr.status === 200) {
           var data = JSON.parse(xhr.responseText);
@@ -62,8 +60,6 @@
       
       xhr.send();
     });
-
-    //a partir daqui nao funciona, é o cod do botao visualizar
 
     function showData(data) {
       var container = document.getElementById('dataContainer');
