@@ -48,7 +48,7 @@
       element.click();
       document.body.removeChild(element);
     });
-
+		//it doesn't work - function for reading data
 	document.getElementById('loadButton').addEventListener('click', function() {
       var xhr = new XMLHttpRequest();
       xhr.open('GET', 'C:\Users\Downloads\data.json', true);  // substitua 'caminho/do/arquivo.json' pelo caminho correto para o seu arquivo JSON - corrigir e apagar comentarios do chatgpt
