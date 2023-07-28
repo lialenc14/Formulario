@@ -1,2 +1,2 @@
-# Svelte-form
-Formulário Svelte
+# Svelte
+Formulário simples em Svelte
